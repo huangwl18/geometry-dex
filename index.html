@@ -86,6 +86,570 @@
   </div>
 </section>
 
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="columns is-centered">
+          <img src="./static/images/teaser-animated.gif" width="450"/>
+      </div>
+      <div class="columns is-centered">
+        <div class="column">
+            <img src="./static/images/complex-test/utah_teapot-geometry.gif" width="250"/>
+        </div>
+        <div class="column">
+            <img src="./static/images/complex-test/pyramid-geometry.gif" width="250"/>
+        </div>
+              
+        <div class="column">
+          <img src="./static/images/complex-test/cell_phone-geometry.gif" width="250"/>
+        </div>
+
+        <div class="column">
+          <img src="./static/images/complex-test/bowl-geometry.gif" width="250"/>
+        </div>
+      </div>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Geometry-Aware Multi-Task Policy</span> performs in-hand manipulation of over 100 geometrically-diverse objects and generalize to new objects with unseen geometry and size.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Dexterous manipulation of arbitrary objects, a fundamental daily task for humans, has been a grand challenge for autonomous robotic systems. Although data-driven approaches using reinforcement learning can develop <i>specialist</i> policies that discover behaviors to control a single object, they often exhibit poor generalization to unseen ones. In this work, we show that policies learned by existing reinforcement learning algorithms can in fact be <i>generalist</i> when combined with multi-task learning and a well-chosen object representation. We show that a single generalist policy can perform in-hand manipulation of over 100 geometrically-diverse real-world objects and generalize to new objects with unseen shape or size. Interestingly, we find that multi-task learning with object point cloud representations not only generalizes better but even outperforms the single-object specialist policies on both training as well as held-out test objects.
+            </p>
+          </div>
+        </div>
+    </div>
+    <!--/ Abstract. -->
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-widescreen">
+    <!-- Overview -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Overview of the Algorithm</h2>
+        <div class="content has-text-justified">
+          <p>
+            We introduce simple extensions to existing RL algorithms to train a dexterous manipulation policy that is surprisingly robust to over 100 geometrically-diverse objects and even outperforms single-task oracles on unseen objects when evaluated in a zero-shot manner. We first train an object representation encoder using object point clouds (<b>left</b>). Then we perform multi-task RL training on a large number of objects leveraging the encoded object representation (<b>right</b>).
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Overview -->
+  <img src="./static/images/method.jpg" alt="Overview of the Algorithm" width="1800"/>
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+  <div class="container is-max-widescreen">
+    <!-- Overview -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Suite of Dexterous Manipulation Tasks with Real World Objects</h2>
+        <div class="content has-text-justified">
+          <p>
+            Along with the paper, we also release a suite of dexterous manipulation tasks built upon <a href="https://github.com/openai/gym"><u><b>OpenAI Gym</b></u></a> and <a href="https://mujoco.org"><u><b>MuJoCo</b></u></a>. Instead of using simple-geometry objects (e.g. cube, egg, etc), the tasks feature a diverse set of 114 real-world objects collected from the <a href="https://www.ycbbenchmarks.com"><u><b>YCB Dataset</b></u></a> and the <a href="https://contactdb.cc.gatech.edu"><u><b>ContactDB Dataset</b></u></a>. 
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Overview -->
+  <img src="./static/images/all-envs.png" width="1800"/>
+  </div>
+  </div>
+</section>
+
+<section class="hero is-dark">
+  <div class="hero-body">
+    <div class="container is-max-widescreen">
+      <!-- Training Videos -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Video Results on Training Objects</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-widescreen">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-4">Complex-Geometry Objects</h3>
+        <div class="content has-text-justified">
+          <p>
+            A single <b>Geometry-Aware Policy</b> can simultaneously manipulate a large number of complex-shaped objects, with performance significantly better than its vanilla counterpart and even single-task oracles. Notice how the policy knows to utilize all fingers and stretch the thumb when it's blocking the object.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Training Videos -->
+
+    <div class="columns is-centered">
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <h2 class="title is-5">Geometry-Aware Policy (Ours)</h2>
+          <img src="./static/images/complex-train/power_drill-geometry.gif" width="250"/>
+        </div>
+      </div>
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <h2 class="title is-5">Vanilla Multi-Task Policy</h2>
+          <img src="./static/images/complex-train/power_drill-vanilla.gif" width="250"/>
+        </div>
+      </div>
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <h2 class="title is-5"><u>Individual Oracle (Single-Task)</u></h2>
+          <img src="./static/images/complex-train/power_drill-oracle.gif" width="250"/>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="columns is-centered">
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <img src="./static/images/complex-train/alarm_clock-geometry.gif" width="250"/>
+        </div>
+      </div>
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <img src="./static/images/complex-train/alarm_clock-vanilla.gif" width="250"/>
+        </div>
+      </div>
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <img src="./static/images/complex-train/alarm_clock-oracle.gif" width="250"/>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="columns is-centered">
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <img src="./static/images/complex-train/sponge-geometry.gif" width="250"/>
+        </div>
+      </div>
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <img src="./static/images/complex-train/sponge-vanilla.gif" width="250"/>
+        </div>
+      </div>
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <img src="./static/images/complex-train/sponge-oracle.gif" width="250"/>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="columns is-centered">
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <img src="./static/images/complex-train/camera-geometry.gif" width="250"/>
+        </div>
+      </div>
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <img src="./static/images/complex-train/camera-vanilla.gif" width="250"/>
+        </div>
+      </div>
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <img src="./static/images/complex-train/camera-oracle.gif" width="250"/>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-4">Simple-Geometry Objects</h3>
+        <div class="content has-text-justified">
+          <p>
+            The policy can also manipulate simple-geometry objects with ease. Note that the gains are not significant because these objects often do not require fine-grained geometrical reasoning and can be rotated with similar strategies.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <h2 class="title is-5">Geometry-Aware Policy (Ours)</h2>
+          <img src="./static/images/simple-train/apple-geometry.gif" width="250"/>
+        </div>
+      </div>
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <h2 class="title is-5">Vanilla Multi-Task Policy</h2>
+          <img src="./static/images/simple-train/apple-vanilla.gif" width="250"/>
+        </div>
+      </div>
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <h2 class="title is-5"><u>Individual Oracle (Single-Task)</u></h2>
+          <img src="./static/images/simple-train/apple-oracle.gif" width="250"/>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="columns is-centered">
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <img src="./static/images/simple-train/b_cups-geometry.gif" width="250"/>
+        </div>
+      </div>
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <img src="./static/images/simple-train/b_cups-vanilla.gif" width="250"/>
+        </div>
+      </div>
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <img src="./static/images/simple-train/b_cups-oracle.gif" width="250"/>
+        </div>
+      </div>
+
+    </div>
+  
+  </div>
+</section>
+
+
+<section class="hero is-dark">
+  <div class="hero-body">
+    <div class="container is-max-widescreen">
+      <!-- Generalization Videos -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Video Results of Zero-Shot Generalization</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-widescreen">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-4">Complex-Geometry Objects</h3>
+        <div class="content has-text-justified">
+          <p>
+            The policy can also generalize to unseen objects with challenging geometries in a zero-shot manner. These objects often have unfamiliar shapes and uncommon shape-ratios compared to those in the training set. Notice that it can even outperform oracles on some objects.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <h2 class="title is-5">Geometry-Aware Policy (Ours)</h2>
+          <img src="./static/images/complex-test/utah_teapot-geometry.gif" width="250"/>
+        </div>
+      </div>
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <h2 class="title is-5">Vanilla Multi-Task Policy</h2>
+          <img src="./static/images/complex-test/utah_teapot-vanilla.gif" width="250"/>
+        </div>
+      </div>
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <h2 class="title is-5"><u>Individual Oracle (Single-Task)</u></h2>
+          <img src="./static/images/complex-test/utah_teapot-oracle.gif" width="250"/>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="columns is-centered">
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <img src="./static/images/complex-test/cell_phone-geometry.gif" width="250"/>
+        </div>
+      </div>
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <img src="./static/images/complex-test/cell_phone-vanilla.gif" width="250"/>
+        </div>
+      </div>
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <img src="./static/images/complex-test/cell_phone-oracle.gif" width="250"/>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="columns is-centered">
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <img src="./static/images/complex-test/bowl-geometry.gif" width="250"/>
+        </div>
+      </div>
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <img src="./static/images/complex-test/bowl-vanilla.gif" width="250"/>
+        </div>
+      </div>
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <img src="./static/images/complex-test/bowl-oracle.gif" width="250"/>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="columns is-centered">
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <img src="./static/images/complex-test/pyramid-geometry.gif" width="250"/>
+        </div>
+      </div>
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <img src="./static/images/complex-test/pyramid-vanilla.gif" width="250"/>
+        </div>
+      </div>
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <img src="./static/images/complex-test/pyramid-oracle.gif" width="250"/>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-4">Simple-Geometry Objects</h3>
+        <div class="content has-text-justified">
+          <p>
+            When evaluated zero-shot on unseen simple objects, while the <b>Geometry-Aware Policy</b> has similar high success rates compared to the vanilla policy, it can often achieve the goal much faster. The speed is similar to the oracle policies that are trained on these objects individually.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <h2 class="title is-5">Geometry-Aware Policy (Ours)</h2>
+          <img src="./static/images/simple-test/pear-geometry.gif" width="250"/>
+        </div>
+      </div>
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <h2 class="title is-5">Vanilla Multi-Task Policy</h2>
+          <img src="./static/images/simple-test/pear-vanilla.gif" width="250"/>
+        </div>
+      </div>
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <h2 class="title is-5"><u>Individual Oracle (Single-Task)</u></h2>
+          <img src="./static/images/simple-test/pear-oracle.gif" width="250"/>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="columns is-centered">
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <img src="./static/images/simple-test/potted_meat_can-geometry.gif" width="250"/>
+        </div>
+      </div>
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <img src="./static/images/simple-test/potted_meat_can-vanilla.gif" width="250"/>
+        </div>
+      </div>
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <img src="./static/images/simple-test/potted_meat_can-oracle.gif" width="250"/>
+        </div>
+      </div>
+
+    </div>
+  
+  </div>
+</section>
+
+
+
+<section class="hero is-light">
+  <div class="hero-body">
+    <div class="container is-max-widescreen">
+      <!-- Generalization Videos -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Failure Cases in Generalization</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-widescreen">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <div class="content has-text-justified">
+          <p>
+            However, the policy still has trouble generalizing to objects with very uneven/fine-grained geometries, indicating room for future improvement. Note that these objects are proven to be difficult even when trained individually for oracle policies.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <h2 class="title is-5">Geometry-Aware Policy (Ours)</h2>
+          <img src="./static/images/failure-test/train-geometry.gif" width="250"/>
+        </div>
+      </div>
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <h2 class="title is-5">Vanilla Multi-Task Policy</h2>
+          <img src="./static/images/failure-test/train-vanilla.gif" width="250"/>
+        </div>
+      </div>
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <h2 class="title is-5"><u>Individual Oracle (Single-Task)</u></h2>
+          <img src="./static/images/failure-test/train-oracle.gif" width="250"/>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="columns is-centered">
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <img src="./static/images/failure-test/door_knob-geometry.gif" width="250"/>
+        </div>
+      </div>
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <img src="./static/images/failure-test/door_knob-vanilla.gif" width="250"/>
+        </div>
+      </div>
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <img src="./static/images/failure-test/door_knob-oracle.gif" width="250"/>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="columns is-centered">
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <img src="./static/images/failure-test/flute-geometry.gif" width="250"/>
+        </div>
+      </div>
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <img src="./static/images/failure-test/flute-vanilla.gif" width="250"/>
+        </div>
+      </div>
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <img src="./static/images/failure-test/flute-oracle.gif" width="250"/>
+        </div>
+      </div>
+
+    </div>
+  
+  </div>
+</section>
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{huang2021geometry,
+      title={Generalization in Dexterous Manipulation via Geometry-Aware Multi-Task Learning},
+      author={Huang, Wenlong and Mordatch, Igor and Abbeel, Pieter and Pathak, Deepak},
+      url={https://huangwl18.github.io/geometry-dex}
+      year={2021}
+    }</code></pre>
+  </div>
+</section>
+
 
 <footer class="footer">
   <div class="container">
