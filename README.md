@@ -1,5 +1,5 @@
 ## Generalization in Dexterous Manipulation via</br>Geometry-Aware Multi-Task Learning
-#### [[Project Page]](https://huangwl18.github.io/geometry-dex/) [[Paper]](https://arxiv.org/pdf/2111.03062.pdf)
+#### [[Project Page]](https://huangwl18.github.io/geometry-dex/) [[Paper]](https://wenlong.page/papers/geometry-dex.pdf)
 
 [Wenlong Huang](https://wenlong.page)<sup>1</sup>, [Igor Mordatch](https://scholar.google.com/citations?user=Vzr1RukAAAAJ&hl=en)<sup>2</sup>, [Pieter Abbeel](http://people.eecs.berkeley.edu/~pabbeel/)<sup>1</sup>, [Deepak Pathak](https://www.cs.cmu.edu/~dpathak/)<sup>3</sup>
 
