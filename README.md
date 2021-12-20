@@ -29,6 +29,8 @@ If you find this work useful in your research, please cite using the following B
 - CUDNN=7.6.5
 - MuJoCo=1.50 ([Installation Instructions](https://github.com/openai/mujoco-py/tree/1.50.1.1#synopsis))
 
+**Note:** MuJoCo now comes with [a free license](https://roboti.us/license.html).
+
 ### Setup Instructions
 ```Shell
 git clone https://github.com/huangwl18/geometry-dex.git
